@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>EstruturaDeDados</title>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"/>
+    <meta content="Página padrão" name="description"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <meta name="description" content="Site pessoal, de Daniel Soares Gomes"/>
+    <!--CSS e Bootstrap-->
+    <link href="../../assets/css/bootstrap.min.css" rel="stylesheet"/>
+    <!--JS-->
+    <script type="text/javascript" src="../../assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../../assets/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        v {color:red; font-size:20px;}
+        blue {color:blue; font-size:20px;}
+    </style>
+</head>
+
+<body>
+<header>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" type="button">
+                    <span class="icon-bar"></span> 
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.php">Daniel S. Gomes</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="../../index.php"><i aria-hidden="true" class="fa fa-graduation-cap"></i> Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header><!--FIM Menu da página-->
+
+<div class="container-fluid">
+    <h2 class="text-center">Estrutura de Dados</h2>
+    
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3>Sumário</h3>
+                <ul style="font-size:15px;">
+                    <li><a href="#aula01">Aula 01 - Modularização</a></li>
+                    <li><a href="#aula02">Aula 02 - .</a></li>
+                    <li><a href="#aula03">Aula 03 - .</a></li>
+                    <li><a href="#aula04">Aula 04 - .</a></li>
+                    <li><a href="#aula05">Aula 05 - .</a></li>
+                    <li><a href="#aula06">Aula 06 - .</a></li>
+                    <li><a href="#aula07">Aula 07 - .</a></li>
+                    <li><a href="#aula08">Aula 08 - .</a></li>
+                </ul>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 class="text-center" id="aula01">Aula 01 - Modularização:</h3>
+                <div style="font-size:20px">
+                    <b>APRESENTAÇÃO:</b><br>
+                        À medida que um software vai aumentando em tamanho e complexidade, a sua manutenibilidade vai tornando-se mais difícil e dispendiosa. Dentre as várias técnicas que você pode utilizar para ajudar a resolver esse problema, destaca-se a modularização, que consiste na divisão do código em pequenos módulos, chamados de procedimentos e funções.<br>
+                        Nesta Unidade de Aprendizagem, você aprenderá as vantagens da modularização, a diferença entre funções e procedimentos, como criar as "chamadas" e utilizar variáveis locais e globais. Ao final desta unidade, você deve entender: Identificar as diferenças entre funções e procedimentos; Praticar a criação e chamada de funções e procedimentos; Usar variáveis locais e globais.<br>
+                        <br>
+                    <b>DESAFIO:</b><br>
+                        Quando dividimos um programa em pequenas partes, cada uma delas tem seu papel bem definido na execução. Como vantagens de dividir o programa em pequenas partes, podemos citar: Facilita a detecção de erros, pois verificar qual é o módulo responsável pelo erro é em princípio simples; Facilita o teste dos módulos individualmente; Facilita a manutenção no programa.<br>
+                        Imagine que você faz parte de uma equipe de desenvolvimento de uma empresa de soluções na área financeira. Você tem um grande desafio: promover a modularização do algoritmo que lista os clientes devedores em ordem decrescente.<br>
+                        Nesse algoritmo, você deve utilizar os conceitos de modularização aprendidos nesta Unidade de Aprendizagem.<br>
+                        <pre>
+                        Crie um procedimento para ler os valores digitados a seguir pelo usuário:
+                            Algoritmo "bolha" var valores:
+                            var
+                            valores:vetor[0...3] de real
+                            aux:real
+                            i,j:inteiro
+                            inicio
+                            para i até 3 faça
+                            escreva("digite o ", i+1,"º numero")
+                            leia (valores[i])
+                            fimpara
+                            Crie um procedimento para ler os valores digitados a seguir pelo usuário:
+                            para i de 0 até 3 faça
+                            para j de 0 até 3 faça
+                            se valores[i] > valores[j] entao 
+                            aux <- valores[j]
+                            valores[j] <- valores[i]
+                            valores[i] <- aux
+                            fimse
+                            fimpara
+                            fimpara
+                            Crie um procedimento para ler os valores digitados a seguir pelo usuário:
+                            para i de 0 até 3 faça
+                            escreval(valores[i])
+                            fimpara
+                            fimalgoritmo</pre>
+                        <br>
+                    <b>INFOGRÁFICO:</b><br>
+                        A modularização é a técnica de quebrar um algoritmo em pequenas partes, às quais damos o nome de métodos (funções e procedimentos). Na prática, temos um módulo principal que faz a chamada dos métodos (funções/procedimentos). Lembrando que um método (funções/procedimentos) pode chamar um outro método (funções/procedimentos) e só após voltar ao módulo principal.<br>
+                        <br>
+                    <b>CONTEÚDO DO LIVRO:</b><br>
+                        <div style="margin-left:15px; font-size:18px;">
+                            Conforme um problema torna-se mais complexo, surge uma série de situações a serem resolvidas para que ele seja solucionado. Podemos dizer que passamos a ter uma série de "probleminhas", que, muitas vezes, afetam a legitimidade e a clareza de um algoritmo, fazendo com que uma consulta ou manutenção futura da lógica aplicada a ele seja uma tarefa difícil de realizar.<br>
+                            No capítulo Modularização, do livro Estrutura de dados, você vai, justamente, descobrir como é possível evitar essa situação.<br>
+                            <b>MODULARIZAÇÃO</b><br>
+                            <b>INTRODUÇÃO:</b><br>
+                                <div style="font-size:18px; margin-left:15px;">
+                                    Conforme um problema se torna mais complexo, surge uma série de situações a serem tratadas para esse problema ser solucionado. Pode-se dizer que existem, dentro do problema de origem, uma série de pequenos problemas, que, muitas vezes, afetam a legitimidade (clareza) de um algoritmo, fazendo uma consulta ou a manutenção futura da lógica aplicada a ele ser uma tarefa difícil de realizar.<br>
+                                    Com a modularização, é possível evitar esse problema, pois trata-se de uma técnica para quebrar um problema em pequenas partes, sendo que cada uma delas tem seu papel bem-definido na execução do algoritmo. Essas pequenas partes são denominadas como módulo.<br>
+                                    Um módulo é um grupo de comandos que consitui um trecho de algoritmos com uma função bem definida e o mais independente possível das demais partes do algoritmo. Cada módulo, durante a execução do algoritmo, realiza uma tarefa específica da solução do problema e, para isso, pode contar com o auxilio de outros módulos do algoritmo. Dessa forma, a execução de um algoritmo contendo vários módulos pode ser vista como um processo cooperativo.<br>
+                                    <b>Vantagens do uso da Modularização</b><br>
+                                    <li>Facilidade ao escrever o algoritmo: O dev pode focar nas pequenas partes de um problema maior e mais complicado, e criar uma solução para cada pequena parte, depois solucionar o problema maior se torna mais fácil tbm.</li>
+                                    <li>O algoritmo fica mais fácil de ler: Quem não o desenvolveu conseguirá ler mais facilmente o algoritmo, por ser mais fácil entender um modulo de cada vez.</li>
+                                    <li>Abstração: é possível entender o que o algoritmo faz apenas entendendo cada módulo. </li>
+                                    <li>Economia de tempo e esforço: necessita executar a mesma tarefa em vários locais em um mesmo algoritmo. Criando um módulo, vc pode chama-lo quantas vezes quiser, em N locais diferentes do algoritmo, evitando reescrevê-lo mais de uma vez.</li>
+                                    <li>Reutilização: após criar o módulo, é possível utilizá-lo em outros algoritmos sem que eles sejam modificados, da mesma forma que se usa os operadores leia e escreva.</li>
+                                    A modularização é realizada pela definição de um módulo principal que coordenará o trabalho dos demais módulos. O módulo principal solicita a execução dos vários módulos em uma determinada ordem, os quais, antes de iniciar a execução, recebem dados do módulo principal e, ao final, devolvem o resultado.<br>
+                                    
+                                </div>
+                        </div><!--div-conteudo-do-livro-->
+                </div><!--div aula01-->
+
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 class="text-center" id="aula02">Aula 02 - </h3>
+                <p style="font-size:20px;">
+                </p>
+        </div><!--aula 02-->
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 class="text-center" id="aula03">Aula 03 - :</h3>
+                <p style="font-size:20px;">
+                </p>
+        </div><!--aula 03-->
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 class="text-center" id="aula04">Aula 04 - :</h3>
+                <p style="font-size:20px">
+                </p>
+        </div><!--aula 04-->
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 class="text-center" id="aula05">Aula 05 - :</h3>
+                <p style="font-size:20px;">
+                </p>
+        </div><!--aula 05-->
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 class="text-center" id="aula06">Aula 06 - :</h3>
+                <p style="font-size:20px;">
+                </p>
+        </div><!--aula 06-->
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 class="text-center" id="aula07">Aula 07 - :</h3>
+                <p style="font-size:20px;">
+                </p>
+        </div><!--aula 07-->
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3 class="text-center" id="aula08">Aula 08 - :</h3>
+                <p style="font-size:20px;"></p>
+        </div><!--aula 08-->
+    </div><!--div row-->
+    <footer class="text-center">
+        Rodapé
+    </footer>
+</div>
+</body>
+</html>
